@@ -1,17 +1,24 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="drum-machine">
+    <div id="display">
+      <DrumPad :buttonName="padItem"  v-for="padItem in padList" :key="padItem" />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import DrumPad from './components/DrumPad'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    DrumPad
+  },
+  data(){
+    return{
+      padList : ['Q','W','E','A', 'S', 'D', 'Z', 'X', 'C']
+    }
+    
   }
 }
 </script>
