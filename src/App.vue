@@ -1,18 +1,23 @@
 <template>
   <div id="drum-machine">
     <div id="display">
-      <DrumPad :buttonName="padItem"  v-for="padItem in padList" :key="padItem" />
+      <button class="drum-pad" :id="padItem" v-for="padItem in padList"  :key="padItem">
+      {{ padItem }}
+      <audio
+            src="/media/cc0-audio/t-rex-roar.mp3" class="clip" :id="buttonName">
+    </audio>
+    </button>
     </div>
   </div>
 </template>
 
 <script>
-import DrumPad from './components/DrumPad'
+
 
 export default {
   name: 'App',
   components: {
-    DrumPad
+    
   },
   data(){
     return{
