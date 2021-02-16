@@ -4,7 +4,7 @@
       <button class="drum-pad" :id="padItem" v-for="padItem in padList"  :key="padItem">
       {{ padItem }}
       <audio
-            src="/media/cc0-audio/t-rex-roar.mp3" class="clip" :id="buttonName">
+            src="/media/cc0-audio/t-rex-roar.mp3" class="clip" :id="padItem">
     </audio>
     </button>
     </div>
